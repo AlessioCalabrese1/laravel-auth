@@ -9,8 +9,8 @@
         <img src="{{ $post->img }}" alt="">
       <h5 class="card-title">{{ $post->title }}</h5>
       <p class="card-text">{{ $post->content }}</p>
-      {{-- <a href="{{ route('admin.posts.edit') }}" class="btn btn-primary">Edit</a>
-      <a href="{{ route('admin.posts.destroy') }}" class="btn btn-danger">Cancel</a> --}}
+      <a href="{{ route('admin.posts.edit') }}" class="btn btn-primary">Edit</a>
+      {{-- <a href="{{ route('admin.posts.destroy') }}" class="btn btn-danger">Cancel</a> --}}
     </div>
     <div class="card-footer text-muted">
       {{ $post->date }}

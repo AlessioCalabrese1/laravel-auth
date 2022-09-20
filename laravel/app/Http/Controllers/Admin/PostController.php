@@ -71,7 +71,8 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        return view('admin.post.edit', $post->id);
     }
 
     /**
@@ -83,7 +84,8 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $sentData = $request->all();
+        $post = Post::findOrFail($id);
     }
 
     /**
