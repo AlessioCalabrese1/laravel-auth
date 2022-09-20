@@ -15,8 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $test = User::all();
-    dd($test);
     return view('welcome');
 });
 
@@ -28,4 +26,5 @@ Route::middleware('auth')
 ->prefix('admin')
 ->group(function(){
     Route::get('/home', 'HomeController@index')->name('home');
+    Route::resource('/posts', 'PostController');
 });
