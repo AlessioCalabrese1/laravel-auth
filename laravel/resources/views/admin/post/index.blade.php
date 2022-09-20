@@ -37,6 +37,11 @@
                     <th>
                         <a class="btn btn-primary" href="{{ route('admin.posts.show', $post->id) }}">View</a>
                         <a class="btn btn-primary" href="{{ route('admin.posts.edit', $post->id) }}">Edit</a>
+                        <form action="{{ route('admin.posts.destroy', $post->id) }}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Cancel</button>
+                        </form>
                     </th>
                 </tr>
                 @endforeach
